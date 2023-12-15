@@ -1,5 +1,4 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'dart:convert';
 
 part 'news_list_response.freezed.dart';
 part 'news_list_response.g.dart';

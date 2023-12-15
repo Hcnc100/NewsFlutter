@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:news/ui/screens/simple_news_screen/view_model/news_view_model.dart';
 import 'package:news/ui/screens/simple_news_screen/widgets/concatenate_indicator.dart';
 import 'package:news/ui/screens/simple_news_screen/widgets/news_container.dart';
-import 'package:news/ui/screens/view_model/news_view_model.dart';
 
 class SimpleNewsScreen extends HookConsumerWidget {
+  static const route = '/simple-news-screen';
+  static const name = 'SimpleNewsScreen';
+
   const SimpleNewsScreen({super.key});
   @override
   Widget build(BuildContext context, WidgetRef ref) {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:news/ui/screens/view_model/news_view_model.dart';
+import 'package:news/ui/screens/simple_news_screen/view_model/news_view_model.dart';
 
 class ConcatenateIndicator extends ConsumerWidget {
   const ConcatenateIndicator({super.key});
