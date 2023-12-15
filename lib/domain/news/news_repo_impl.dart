@@ -16,20 +16,24 @@ class NewsRepoIimpl implements NewsRepository {
   int _page = 1;
 
   @override
-  Future<void> getListNews() async {
+  Future<int> getListNews() async {
     _page = 1;
     final newsList = await _newsRemoteDataSource.getListNews(page: _page);
     await _newsLocalDataSource.replaceNewsList(newsList);
     _page++;
+
+    return newsList.length;
   }
 
   @override
   Stream<List<NewsData>> getNews() => _newsLocalDataSource.getNews();
 
   @override
-  Future<void> concatNewsList() async {
+  Future<int> concatNewsList() async {
     final newsList = await _newsRemoteDataSource.getListNews(page: _page);
     _newsLocalDataSource.insertNewsList(newsList);
     _page++;
+
+    return newsList.length;
   }
 }

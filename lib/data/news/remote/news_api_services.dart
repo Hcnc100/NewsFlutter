@@ -5,7 +5,7 @@ import 'package:news/models/api/response/news_list_response.dart';
 
 part 'news_api_services.g.dart';
 
-@RestApi(baseUrl: NewsConstants.BASE_URL)
+@RestApi(baseUrl: NewsConstants.baseUrl)
 abstract class NewsApiServices {
   factory NewsApiServices(Dio dio) = _NewsApiServices;
 

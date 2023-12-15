@@ -13,9 +13,9 @@ class NewsRemoteDataSourceImpl implements NewsRemoteDataSource {
   Future<List<NewsData>> getListNews({required int page}) async {
     final response = await _newsApiServices.getListNews(
       page: page,
-      apiKey: NewsConstants.API_KEY,
-      pageSize: NewsConstants.PAGE_SIZE,
-      country: NewsConstants.COUNTRY,
+      apiKey: NewsConstants.getNewsKey(),
+      pageSize: NewsConstants.pageSize,
+      country: NewsConstants.country,
     );
 
     return response.articles!
